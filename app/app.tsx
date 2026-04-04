@@ -1,13 +1,13 @@
 'use client'
 
-import dynamic from 'next/dynamic'
-import { useCallback, useState } from 'react'
+import { useMemorySearch } from '@/hooks/useMemorySearch'
 import { fetchCreateAgentTaskClientToken } from '@/lib/fetchCreateAgentTaskClientToken'
 import {
     AgentTaskProgress,
     type AgentTaskMemoryClickPayload,
 } from '@fencyai/react'
-import { useMemorySearch } from '@/hooks/useMemorySearch'
+import dynamic from 'next/dynamic'
+import { useCallback, useState } from 'react'
 
 const PdfViewerModal = dynamic(
     () =>
@@ -39,7 +39,7 @@ export default function App() {
 
     const { latest, isSearching, search } = useMemorySearch({
         fetchCreateAgentTaskClientToken,
-        model: 'openai/gpt-4.1-mini',
+        model: "anthropic/claude-opus-4.6",
     })
 
     const task =
