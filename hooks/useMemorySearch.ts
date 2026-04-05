@@ -27,7 +27,7 @@ export function useMemorySearch({
 
         setIsSearching(true)
         try {
-            await createAgentTask({
+            const response = await createAgentTask({
                 type: 'MemorySearch',
                 query: trimmed,
                 model,
@@ -35,6 +35,7 @@ export function useMemorySearch({
                 chunkLimit: 5,
                 queryExpansion: { queryCount: 3 },
             })
+            console.log(response)
         } catch {
             // Task error is surfaced via task.error
         } finally {
