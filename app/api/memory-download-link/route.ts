@@ -72,7 +72,7 @@ export async function POST(request: Request) {
     }
 
     const postRes = await fetch(
-        `${API_BASE}/memories/${memoryId}/download-links`,
+        `${API_BASE}/memories/${memoryId}/download-link`,
         {
             method: 'POST',
             headers: authHeaders(),

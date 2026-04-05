@@ -112,4 +112,4 @@ Each task shows the query and `AgentTaskProgress` for live progress and final ra
 
 ### 5. PDF download link - `app/api/memory-download-link/route.ts`
 
-Server-side only: fetches the memory via `GET /v1/memories/:id` to verify metadata, then requests a presigned download URL via `POST /v1/memories/:id/download-links` and returns `{ downloadLink }` to the client viewer.
+Server-side only: fetches the memory via `GET /v1/memories/:id` to verify metadata, then requests a presigned download URL via `POST /v1/memories/:id/download-link` and returns `{ downloadLink }` to the client viewer.
